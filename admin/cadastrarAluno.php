@@ -1,4 +1,4 @@
-<?php require ('conexao.php'); ?>
++<?php require ('conexao.php'); ?>
 <?php
     //Recebe os dados do Usuário
     $nome = $_POST["nome"];
@@ -19,7 +19,7 @@
 
     if (mysqli_num_rows($selecao) > 0) {
         echo '<script>alert("Já Existe um Aluno Cadastrado com esse RA ou CPF");</script>';
-        echo '<meta http-equiv="refresh" content="0";url="">';
+        echo '<scripttype="text/javascript">location.replace("../index.html");</script>';
         return false;
     }
 
