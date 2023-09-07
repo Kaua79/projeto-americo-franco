@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Projeto</title>
 </head>
 <body>
     <form action="admin/cadastrarAluno.php" method="post">
-        <label for="Nome">Nome :</label>
-        <input type="text" name="nome"><br>
+        Nome : <input type="text" name="nome"/>
+        <br/>
 
-        <label for="CPF">CPF :</label>
-        <input type="text" name="cpf"><br>
+        Sala : <input type="text" name="sala"/>
+        <br/>
 
-        <label for="Endereco">Endereço :</label>
-        <input type="text" name="endereco"><br>
+        CPF : <input type="text" name="cpf"/>
+        <br/>
+        Endereço : <input type="text" name="endereco"/>
+        <br/>
+        Telefone: <input type="text" name="telefone"/>
+        <br/>
+        RA : <input type="text" name="ra"/>
+        <br/>
+        Imagem do Aluno <input name="arquivo" type="file">
+        <br/>
 
-        <label for="Telefone">Telefone :</label>
-        <input type="text" name="telefone"><br>
+        <input type="submit" value="Cadastrar Aluno"/>
 
-        <label for="RA">RA :</label>
-        <input type="text" name="ra"><br>
-
-        <input type="submit" value="cadastrarAluno">
     </form>
-    
-    <p>Consulta</p>
-<form method="POST" action="pesquisar.php">
-    Pesquisar:<input type="text" name="pesquisar" placeholder="PESQUISAR">
-    <input type="submit" value="ENVIAR">
-</form>
+
+    <hr/>
+
+    <form action="admin/pesquisarAluno.php" method="post">
+        <input type="text" name="pesquisa">
+        <br>
+        <input type="submit" value="Pesquisar">
+    </form>
 </body>
 </html>

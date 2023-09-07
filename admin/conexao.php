@@ -7,16 +7,19 @@
 
         private $senha = "";
 
-        private $database ="americofranco";
+        private $database = "americofranco";
+    
+    
+    public function conectaMySQL(){
+        $conexao = mysqli_connect($this->host,$this->usuario,$this->senha,$this->database);
 
-        public function conectaMySQL(){
-            $conexao = mysqli_connect($this->host,$this->usuario,$this->senha,$this->database);
+        mysqli_set_charset(
+            $conexao,'UTF8'
+        );
+        return $conexao;
 
-            mysqli_set_charset(
-                $conexao, 'UTF8'
-            );
-            return $conexao;
-        }
     }
 
-?>
+}
+
+?>    
